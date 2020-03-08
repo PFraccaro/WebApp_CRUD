@@ -1,0 +1,22 @@
+@model Employees
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Edycja</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="EmployeeId"/>
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control"/>
+    </div>
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control"/>
+    </div>
+    <button class="btn btn-danger">Zapisz</button>
+    <a asp-action="Index" class="btn btn-success">Powrót</a>
+</form>
